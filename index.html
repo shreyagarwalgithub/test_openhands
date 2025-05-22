@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Notifications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Traffic & Location Tracker</h1>
+        
+        <div class="status-container">
+            <div id="location-status" class="status-box">
+                <h2>Location Status</h2>
+                <p id="current-location">Waiting for location...</p>
+                <p id="last-updated">Not updated yet</p>
+            </div>
+            
+            <div id="traffic-status" class="status-box">
+                <h2>Traffic Status</h2>
+                <p id="traffic-info">No traffic information yet</p>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="start-tracking">Start Tracking</button>
+            <button id="stop-tracking">Stop Tracking</button>
+            <div class="settings">
+                <label for="check-interval">Check interval (minutes):</label>
+                <input type="number" id="check-interval" min="5" max="60" value="30">
+            </div>
+        </div>
+        
+        <div class="notification-test">
+            <button id="test-notification">Test Notification</button>
+        </div>
+        
+        <div class="setup-instructions">
+            <h2>Setup Instructions</h2>
+            <ol>
+                <li>Allow location access when prompted</li>
+                <li>Allow notifications when prompted</li>
+                <li>Keep this tab open for continuous tracking (or add to home screen on mobile)</li>
+                <li>For best results, use this on your mobile device</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Replace YOUR_API_KEY with an actual Google Maps API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" defer></script>
+    <script src="map.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
