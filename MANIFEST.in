@@ -1,0 +1,3 @@
+include chatgpt_assistant/web/templates/*.html
+include chatgpt_assistant/web/static/css/*.css
+include chatgpt_assistant/web/static/js/*.js

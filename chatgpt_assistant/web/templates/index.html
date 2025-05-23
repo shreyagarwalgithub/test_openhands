@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Assistant Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>ChatGPT Assistant Dashboard</h1>
+    </header>
+    
+    <main>
+        <section class="actions">
+            <h2>Actions</h2>
+            <div class="button-group">
+                <button id="generate-update-btn" class="primary-btn">Generate New Update</button>
+                <button id="send-email-btn" class="secondary-btn">Send Email Update</button>
+            </div>
+        </section>
+        
+        <section class="updates">
+            <h2>Recent Updates</h2>
+            <div id="updates-list" class="list-container">
+                <p class="loading">Loading updates...</p>
+            </div>
+        </section>
+        
+        <section class="topics">
+            <h2>Tracked Research Topics</h2>
+            <div class="add-topic-form">
+                <input type="text" id="new-topic-input" placeholder="Enter a new topic to track">
+                <button id="add-topic-btn" class="primary-btn">Add Topic</button>
+            </div>
+            <div id="topics-list" class="list-container">
+                <p class="loading">Loading topics...</p>
+            </div>
+        </section>
+        
+        <section class="update-details" id="update-details" style="display: none;">
+            <h2>Update Details</h2>
+            <div class="update-content">
+                <div id="update-timestamp" class="timestamp"></div>
+                
+                <h3>Recent Chats</h3>
+                <div id="update-chats" class="detail-list"></div>
+                
+                <h3>New Research Materials</h3>
+                <div id="update-materials" class="detail-list"></div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>ChatGPT Assistant Dashboard &copy; 2025</p>
+    </footer>
+    
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+    
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+web: python -m chatgpt_assistant.main --web --schedule --port $PORT
